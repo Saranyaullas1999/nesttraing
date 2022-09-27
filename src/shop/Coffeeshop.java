@@ -4,20 +4,24 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Coffeeshop {
+
     public static void main(String[] args) {
         int choice;
         ArrayList <String> itemName = new ArrayList<>();
         ArrayList<Integer> quantity = new ArrayList<>();
         ArrayList<Integer> price = new ArrayList<>();
 
+        FoodItems foodItems = new FoodItems(6,5,10,10,8,5);
+        FoodItems takeawayFoodItems = new FoodItems(12,17,13,14,16,12);
+
         while (true){
             System.out.println("Select an option");
-            System.out.println("1. Coffee $6");
-            System.out.println("2. Tea $5");
-            System.out.println("3. GreenTea $10");
-            System.out.println("4. Cake $10");
-            System.out.println("5. Puffs $8");
-            System.out.println("6. Samosa $5");
+            System.out.println("1. Coffee " +foodItems.getCoffee());
+            System.out.println("2. Tea " +foodItems.getTea());
+            System.out.println("3. GreenTea " +foodItems.getGreenTea());
+            System.out.println("4. Cake " +foodItems.getCake());
+            System.out.println("5. Puffs " +foodItems.getPuffs());
+            System.out.println("6. Samosa " +foodItems.getSamosa());
             System.out.println("7. Bill");
             System.out.println("8. Exit");
 
